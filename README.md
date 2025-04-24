@@ -1,6 +1,6 @@
 # Click Brick: Whack-a-Mole - Cairo Edition 🎮
 
-Inspired by the classic Whack-a-Mole, Brick Click reimagines Cairo’s red brick chaos — where green life tries to pop up, but we keep whacking it down with concrete. A playful game with a not-so-playful truth.. Built with **HTML**, **CSS**, and **JavaScript**, this game is lightweight, responsive, and engaging for players of all ages.
+Brick Click is Cairo’s Whack-a-Mole — where every patch of green gets smacked down by red bricks. A playful tribute to a city constantly building over its own breath... Built with **HTML**, **CSS**, and **JavaScript**, this game is lightweight, responsive, and engaging for players of all ages.
 
 ---
 
