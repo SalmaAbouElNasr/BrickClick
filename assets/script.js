@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreElement = document.querySelector('.score span');
     let score = 0;
     let timerInterval; 
+    let gameRunning = false; // Variable to track if the game is running
 
     const title = "Brick Click";
     const titleElement = document.querySelector("h1");
@@ -18,23 +19,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     titleEffect();
+
     // sounds
     const clickSound = new Audio('assets/audio/clickSound.mp3');
     const startSound = new Audio('assets/audio/startSound.mp3');
-    startSound.volume = 0.1
+    startSound.volume = 0.1;
 
-
-    // start the game
+    // Start the game
     function startGame() {
-        startSound.play();
-        let timeLeft = 30; // count down
+        if (gameRunning) return; 
+        gameRunning = true; 
+        const startButton = document.getElementById("start-button");
+        startButton.disabled = true; // Disable the button
+
+        startSound.play(); // Play start sound
+        let timeLeft = 30; // Countdown
         const timerElement = document.getElementById("timer");
 
-        // Reset 
+        // Reset the score
         score = 0;
         scoreElement.textContent = score;
 
-        //timer
+        // Timer countdown
         timerInterval = setInterval(() => {
             timeLeft--;
             timerElement.textContent = `${timeLeft}ث`;
@@ -44,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearInterval(timerInterval);
                 timerElement.textContent = "Time's up!";
                 alert("Game Over! Your score is: " + score);
+                gameRunning = false; 
+                startButton.disabled = false; // Re-enable the button after game ends
             }
         }, 1000);
 
@@ -55,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.classList.add('plant');
             img.src = 'assets/photos/plant.png';
 
-            // click event for plants
+            // Click event for plants
             img.addEventListener('click', () => {
                 clickSound.play();
                 score += 10;
@@ -65,22 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             hole.appendChild(img);
 
-            // Remove cactus after a second
+            // Remove plant after a second
             setTimeout(() => {
                 if (hole.contains(img)) {
                     hole.removeChild(img);
                 }
-                if (timeLeft > 0) {
+                if (timeLeft > 0 && gameRunning) {
                     run(); 
                 }
             }, 700);
         }
 
-        // running
+        // Run the game
         run();
     }
 
-    //event listener to the start button
+    // Event listener to the start button
     const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", startGame);
 });
