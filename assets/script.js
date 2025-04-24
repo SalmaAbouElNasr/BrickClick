@@ -18,9 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     titleEffect();
+    // sounds
+    const clickSound = new Audio('assets/audio/clickSound.mp3');
+    const startSound = new Audio('assets/audio/startSound.mp3');
+    startSound.volume = 0.1
+
 
     // start the game
     function startGame() {
+        startSound.play();
         let timeLeft = 30; // count down
         const timerElement = document.getElementById("timer");
 
@@ -51,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // click event for plants
             img.addEventListener('click', () => {
+                clickSound.play();
                 score += 10;
                 scoreElement.textContent = score;
                 hole.removeChild(img);
