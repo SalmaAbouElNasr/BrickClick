@@ -64,12 +64,12 @@ h1{
     font-weight: 800;
     font-size: 2rem;
 }
-.timescore{
+.timescore {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 39%;
-    margin-left: 39%;
+    justify-content: center; 
+    align-items: center; 
+    gap: 160px; 
+    margin: 0 auto;
 }
 @media (max-width: 600px) {
     body{
@@ -88,10 +88,10 @@ h1{
     }
     .timescore{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-right: 10%;
-        margin-left: 10%;
+        justify-content: center; 
+        align-items: center; 
+        gap: 80px; 
+        margin: 0 auto;
     }
     .plant{
         width: 61px; 
