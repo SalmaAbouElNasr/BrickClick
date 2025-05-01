@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (gameRunning) return; 
         gameRunning = true; 
         const startButton = document.getElementById("start-button");
-        startButton.disabled = true; // Disable the button
-
+        startButton.style.display = "none"; // hide the button
         startSound.play(); // Play start sound
         let timeLeft = 30; // Countdown
         const timerElement = document.getElementById("timer");
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 timerElement.textContent = "Time's up!";
                 alert("Game Over! Your score is: " + score);
                 gameRunning = false; 
-                startButton.disabled = false; // Re-enable the button after game ends
+                startButton.style.display = "inline-block" // Re-enable the button after game ends
             }
         }, 1000);
 
