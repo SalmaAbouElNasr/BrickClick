@@ -28,6 +28,8 @@ h1{
     box-sizing: border-box;
     padding-top: 20px;
     height: calc(100% - 20px);
+    align-items: center;
+
   }
 * {
     box-sizing: border-box;
@@ -92,6 +94,11 @@ h1{
     color: transparent;
 }
 @media (max-width: 600px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
     .board {
         margin-top: 100px;
         width: 270.8px; 
@@ -123,9 +130,7 @@ h1{
         height: calc(100% - 20px);
         align-items: center;
       }
-    body{
-        padding: 10px;
-    }
+
     h1{
         font-size: 1.8rem;
     }  
