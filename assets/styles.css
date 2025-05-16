@@ -136,3 +136,50 @@ h1{
         font-size: 1.8rem;
     }  
 }
+@media (max-height: 610px){
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    body{
+        padding: 15px;
+    }
+    .board {
+        margin-top: 20px;
+        width: 270.8px; 
+        height: 140px;
+        flex-wrap: wrap; 
+    }
+    .hole {
+        width: 48.8px; 
+        height: 41.6px;
+    }
+    .timescore{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 60px; 
+        margin: 0 auto;
+    }
+    .plant{
+        width: 48.8px; 
+        height: 41.6px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        border: solid #214924 6px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        height: 100%;
+        align-items: center;
+      }
+
+    h1{
+        font-size: 1.8rem;
+    }
+    #start-button img {
+        margin-top: 20px;
+
+    }
+}
