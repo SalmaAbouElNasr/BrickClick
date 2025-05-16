@@ -133,7 +133,7 @@ h1{
       }
 
     h1{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }  
 }
 @media (max-height: 610px){
@@ -176,7 +176,7 @@ h1{
       }
 
     h1{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     #start-button img {
         margin-top: 20px;
