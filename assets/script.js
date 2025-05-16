@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // sounds
     const clickSound = new Audio('assets/audio/clickSound.mp3');
     const startSound = new Audio('assets/audio/startSound.mp3');
-    startSound.volume = 0.008;
-    clickSound.volume = 0.08;
 
     // Start the game
     function startGame() {
