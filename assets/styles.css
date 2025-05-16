@@ -1,21 +1,33 @@
-body{
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
     text-align: center;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-image: url(photos/bg-img.jpg);
+    background-image: url(photos/bg-web.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: #333333
-    ;
+    color: #333333;
+    padding: 30px;
 }
 h1{
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    border: solid #214924 6px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    height: calc(100% - 20px);
+  }
 * {
     box-sizing: border-box;
 }
@@ -71,10 +83,14 @@ h1{
     gap: 160px; 
     margin: 0 auto;
 }
+#pattern{
+    background: url(photos/pattern.png) repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 @media (max-width: 600px) {
-    body{
-        background-image: url(photos/bg-img-mob.jpg);
-    }
     .board {
         margin-top: 100px;
         width: 338.5px; 
