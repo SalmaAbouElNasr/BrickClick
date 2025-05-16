@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const startButton = document.getElementById("start-button");
         startButton.style.display = "none"; // hide the button
         startSound.play(); // Play start sound
+        clickSound.play();
         let timeLeft = 30; // Countdown
         const timerElement = document.getElementById("timer");
 
