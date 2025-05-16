@@ -19,6 +19,7 @@ h1{
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
+    font-size: inherit;
 }
 .container {
     display: flex;
@@ -93,25 +94,39 @@ h1{
 @media (max-width: 600px) {
     .board {
         margin-top: 100px;
-        width: 338.5px; 
-        height: 175px;
+        width: 270.8px; 
+        height: 140px;
         flex-wrap: wrap; 
     }
 
     .hole {
-        width: 61px; 
-        height: 52px;
+        width: 48.8px; 
+        height: 41.6px;
     }
     .timescore{
         display: flex;
         justify-content: center; 
         align-items: center; 
-        gap: 80px; 
+        gap: 60px; 
         margin: 0 auto;
     }
     .plant{
-        width: 61px; 
-        height: 52px;
+        width: 48.8px; 
+        height: 41.6px;
     }
-
+    .container {
+        display: flex;
+        flex-direction: column;
+        border: solid #214924 6px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        height: calc(100% - 20px);
+        align-items: center;
+      }
+    body{
+        padding: 10px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }  
 }
