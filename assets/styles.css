@@ -97,7 +97,9 @@ h1{
     html, body {
         height: 100%;
         margin: 0;
-        padding: 0;
+    }
+    body{
+        padding: 15px;
     }
     .board {
         margin-top: 100px;
@@ -105,7 +107,6 @@ h1{
         height: 140px;
         flex-wrap: wrap; 
     }
-
     .hole {
         width: 48.8px; 
         height: 41.6px;
